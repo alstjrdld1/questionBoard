@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+     <title>FINANCE Q&A</title>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+     <link rel="shortcut icon" href="/images/moomin.ico" type="image/x-icon">
+     <link rel="icon" href="/images/moomin.ico" type="image/x-icon">
+     <link rel="stylesheet" href="/css/common.css">
+  </head>
+  <body>
+    <div class="chat_list_wrap">
+        <div class="header" onclick="location.href='http://intlfinta.com'">
+            경희대학교 국제학과 TA 질문 홈페이지
+        </div>
+
+        <form class="post_all" action="./db_shoot.php" method="post">
+          <div class="board_name">
+            <h1>질문하기</h1>
+          </div>
+          <table>
+            <div class="contents_here">
+              <div class="enter_title">
+                <tr>
+                  <th scope="row">제목</th>
+                  <td> <input type="text" name="title" ></td>
+                </tr>
+              </div>
+
+              <div class="enter_content">
+                <tr>
+                  <th scope="row">본문</th>
+                  <td> <textarea type="text" name="description"></textarea></td>
+                </tr>
+              </div>
+            </div>
+
+          </table>
+          <div class="ask_question">
+            <input type="submit" name = "submit" value ="완료"></button>
+          </div>
+        </form>
+    </div>
+  </body>
+</html>

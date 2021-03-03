@@ -1,0 +1,254 @@
+* {
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 11px;
+}
+
+/* 메인 페이지 리스트 레이아웃 공간 */
+.chat_list_wrap {
+  list-style: none;
+}
+.chat_list_wrap .header {
+  font-size: 14px;
+  padding: 15px 0;
+  background: #F18C7E;
+  color: white;
+  text-align: center;
+}
+.chat_list_wrap .search {
+  background: #eee;
+  padding: 5px;
+}
+.chat_list_wrap .search input[type="text"] {
+  width: 100%;
+  border-radius: 4px;
+  padding: 5px 0;
+  border: 0;
+  text-align: center;
+}
+.chat_list_wrap .list {
+  padding: 0 16px;
+}
+.chat_list_wrap .list ul {
+  width: 100%;
+  list-style: none;
+  margin-top: 3px;
+}
+.chat_list_wrap .list ul li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.chat_list_wrap .list ul li table {
+  width: 100%;
+}
+.chat_list_wrap .list ul li table td.question_num {
+  width: 50px;
+  padding-right: 0px;
+}
+.chat_list_wrap .list ul li table td.question_td img {
+  width: 50px;
+  height: auto;
+}
+.chat_list_wrap .list ul li table td.question_td .title {
+  font-size: 12px;
+  font-weight: bold;
+}
+.chat_list_wrap .list ul li table td.time_td {
+  width: 90px;
+  text-align: center;
+}
+.chat_list_wrap .list ul li table td.time_td .time {
+  padding-bottom: 4px;
+}
+.chat_list_wrap .list ul li table td.time_td p {
+  width: 5px;
+  height: 5px;
+  margin: 0 auto;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  background: #e51c23;
+}
+
+/* 질문 받는 버튼들에 대한 내용들 */
+.ask_question {
+  float :right;
+  margin : 10px 15px;
+}
+
+.ask_question button{
+  border-radius: 10%;
+  border-style: hidden;
+  color: white;
+  background-color: #F18C7E;
+  font-size: 13px;
+  padding: 7px 7px;
+}
+
+.ask_question input{
+    border-radius: 10%;
+    border-style: hidden;
+    color: white;
+    background-color: #F18C7E;
+    font-size: 13px;
+    padding: 7px 7px;
+}
+
+/* 게시글 작성 하는 레이아웃 작성 공간 */
+.chat_list_wrap .post_all .board_name h1{
+  font-size : 22px;
+  margin : 10px 15px;
+}
+
+.post_all{
+  padding: 0px 10px;
+}
+
+.post_all table{
+  width : 98%;
+  border-collapse: collapse;
+  text-align: left;
+  line-height: 1.5;
+  margin: auto;
+}
+
+.post_all table th {
+  width: 15%;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  vertical-align: top;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+
+.post_all table td{
+  width: 85%;
+  padding : 10px;
+  vertical-align: top;
+  border: 1px solid #ccc;
+}
+
+.post_all table td input{
+  width: 99%;
+}
+.post_all table td textarea{
+  width: 99%;
+}
+
+.post_all table td textarea[name="description"]{
+  height: 200px;
+  vertical-align: top;
+  resize: none;
+}
+
+/* 질문 보여주는 레이아웃 */
+.post_all .head {
+  border-bottom: 1px solid #ccc;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.chat_list_wrap .post_all .head .board_name h1{
+  color: #F18C7E;
+  font-size: 13px;
+  margin: 5px 0px;
+}
+
+.post_all .head .question_title {
+  font-style: bold;
+  font-size: 25px;
+  margin: 5px 0px;
+}
+
+.post_all .head .question_date{
+  font-size: 10px;
+  margin: 5px 0px 10px 0px;
+}
+
+.post_all .question_body {
+  margin: 10px;
+  font-size: 15px;
+}
+
+/* 댓글 레이아웃 */
+.comments{
+  width: 100%;
+  font-size: 14px;
+
+  border-collapse: collapse;
+  text-align: left;
+  line-height: 1.5;
+  margin-top: 30px;
+}
+
+.comments .comment_line{
+  font-weight: bold;
+  font-size: 17px;
+  margin-left: 10px;
+}
+
+.comments li {
+  border-bottom: 1px solid #ccc;
+  margin: auto;
+  padding: 3px 10px;
+}
+
+.comments li table{
+  width: 100%;
+  text-align: left;
+  line-height: 1.5;
+  margin: 3px 10px;
+}
+
+.comments li table .comment_td .date{
+  font-size: 9px;
+}
+
+.make_comment{
+  width: 100%;
+  background-color: #FAFAFA;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.make_comment .enter_comment{
+  margin: 10px;
+}
+
+.make_comment .enter_comment .comment_textarea{
+  width: 100%;
+  margin: auto;
+}
+
+.make_comment .enter_comment .comment_textarea textarea{
+  width: 97%;
+  height: 70px;
+  padding: 10px;
+
+  border: 1px solid #ccc;
+
+  vertical-align: middle;
+  resize: none;
+}
+
+.make_comment .comment_submit input{
+  float: right;
+  margin : 5px 5px;
+
+  border-radius: 10%;
+  border-style: hidden;
+  background-color: #F18C7E;
+
+  color: white;
+  font-size: 13px;
+  padding: 7px 7px;
+}
+
+
+출처: https://kkotkkio.tistory.com/79 [KKOTKKIO'S CAVE]
