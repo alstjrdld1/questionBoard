@@ -21,7 +21,7 @@ $row = mysqli_fetch_array($result);
   <body>
     <div class="chat_list_wrap">
         <div class="header" onclick="location.href='http://localhost'">
-            경희대학교 국제학과 TA 질문 홈페이지
+            International Finance TA Q&A
         </div>
 
         <div class="post_all">
@@ -40,6 +40,12 @@ $row = mysqli_fetch_array($result);
           </div>
 
           <div class="question_body">
+            <div class="question_img">
+              <?php if($row['uploaded_file'] != null)
+              {
+                echo "<img src='/images/test.png'/>";
+              } ?>
+            </div>
             <div class="question_content">
               <?php echo $row['content']; ?>
             </div>
@@ -65,6 +71,10 @@ $row = mysqli_fetch_array($result);
 
               // Title and preview
               echo '<div class="comment">';
+              if($row['comment_img'] != null){
+                echo "<div class=\"comment_img\">";
+                echo "<img src='/images/test.png'></div>";
+              }
               echo $row['comment'].'<div> </td> </tr> </table> </li>';
 
             }
@@ -72,9 +82,12 @@ $row = mysqli_fetch_array($result);
         </div>
 
         <fieldset class="make_comment">
-          <form action ="/add_comment.php/?idx=<?php echo $index; ?>" class="enter_comment" method="post">
+          <form action ="/add_comment.php/?idx=<?php echo $index; ?>" class="enter_comment" method="post" enctype="multipart/form-data">
             <div class="comment_textarea">
               <textarea placeholder="댓글을 입력해주세요." name="new_comment" tabindex="3"></textarea>
+            </div>
+            <div class="comment_fileUpload">
+              <input type="file" name="comment_file">
             </div>
             <div class="comment_submit">
               <input type="submit" name="" value="Send">

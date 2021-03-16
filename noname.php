@@ -8,7 +8,7 @@ $result = array();
 
 while($row = mysqli_fetch_array($res)){
   array_push($result,
-  array('myname' => $row[0]));
+  array('myname' => $row[0], 'phone_number' => $row[1], 'address' =>$row[2]));
 }
 
 echo json_encode(array("이름" => $result), JSON_UNESCAPED_UNICODE);

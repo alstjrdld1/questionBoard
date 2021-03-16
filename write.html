@@ -13,7 +13,7 @@
             경희대학교 국제학과 TA 질문 홈페이지
         </div>
 
-        <form class="post_all" action="./db_shoot.php" method="post">
+        <form class="post_all" action="./db_shoot.php" method="post" enctype="multipart/form-data">
           <div class="board_name">
             <h1>질문하기</h1>
           </div>
@@ -23,6 +23,21 @@
                 <tr>
                   <th scope="row">제목</th>
                   <td> <input type="text" name="title" ></td>
+                </tr>
+              </div>
+
+              <div class="file_upload">
+                <tr>
+                  <th scope = "row">사진</th>
+                  <td> <input type="file" name="fileToUpload" id="fileToUpload"></td>
+                </tr>
+
+              </div>
+
+              <div class="question_password">
+                <tr>
+                  <th scope = "row">비밀번호</th>
+                  <td> <input type="password" name="question_password_area" id="question_password_area" placeholder="비밀번호를 입력해주세요"> </td>
                 </tr>
               </div>
 

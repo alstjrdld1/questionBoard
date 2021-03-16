@@ -3,6 +3,8 @@ include 'db_connection.php';
 $conn = getConnection();
 
 $title = $_POST['title'];
+
+$password = $_POST['question_password_area'];
 $desc = $_POST['description'];
 
 $count = mysqli_query($conn, "select count(*) as cnt from question");
@@ -11,8 +13,8 @@ $count = mysqli_fetch_array($count);
 $countint = $count['cnt'] + 1;
 echo $countint;
 
-$sql = "insert into question(idx, title, content, date, preview) values
-        (".$countint.", '".$title."', '".$desc."', '".date("Y-m-d H:i:s")."', '".substr($desc, 0, 100)."');";
+$sql = "insert into question(title, content, date, preview) values
+        ('".$title."', '".$desc."', '".date("Y-m-d H:i:s")."', '".substr($desc, 0, 100)."');";
 
 if(!$conn){
   echo "<script type=\"text/javascript\"> alert(\"여러번 반복해도 안되면 관리자에게 문의해주세요.\n 010-4953-8759\")
