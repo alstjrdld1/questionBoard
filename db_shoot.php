@@ -13,7 +13,7 @@ $save_dir = 'images/'; // 저장할 디렉토리 설정
 
 // index 구하는 곳
 $tmpNum = mysqli_query($conn, "SELECT COUNT(*) as cnt FROM question;"); // 쿼리로 인덱스 가져오는 문장
-$tmpNum = mysqli_fetch_array($tmpNum); // 쿼리는 배열로 오니까 배열에서 번호만 뽑아내는 곳 
+$tmpNum = mysqli_fetch_array($tmpNum); // 쿼리는 배열로 오니까 배열에서 번호만 뽑아내는 곳
 $indexNum = $tmpNum['cnt'] + 1; // 지금 게시글은 현재 갯수 + 1 임
 
 // 파일 이름 바꾸는 곳
@@ -47,22 +47,13 @@ $sql = "insert into question(idx, title, content, date, preview, uploaded_file, 
         ({$indexNum}, '{$title}', '{$desc}', '{$date}', '{$preview}', '{$dest_url}', '{$password}', 'qna');";
 
 if(mysqli_query($conn, $sql)){ // 쿼리 실행
-    echo "success";
+  echo "<script type=\"text/javascript\"> alert(\"글쓰기완료요~~\")
+        window.location.replace('http://localhost')</script>";
+}
+else{
+  echo "<script type=\"text/javascript\"> alert(\"여러번 반복해도 안되면 관리자에게 문의해주세요.\n 010-4953-8759\")
+        window.location.replace('http://localhost')</script>";
 }
 
-// if(!$conn){
-//   echo "<script type=\"text/javascript\"> alert(\"여러번 반복해도 안되면 관리자에게 문의해주세요.\n 010-4953-8759\")
-//         window.location.replace('http://localhost')</script>";
-// }
-// else{
-//   if(mysqli_query($conn, $sql)){
-//       echo "<script type=\"text/javascript\"> alert(\"글쓰기완료요~~\")
-//             window.location.replace('http://localhost')</script>";
-//   }
-//   else{
-//     echo "<script type=\"text/javascript\"> alert(\"여러번 반복해도 안되면 관리자에게 문의해주세요.\n 010-4953-8759\")
-//           window.location.replace('http://localhost')</script>";
-//   }
-// }
 
 ?>

@@ -73,7 +73,7 @@ $row = mysqli_fetch_array($result);
               echo '<div class="comment">';
               if($row['comment_img'] != null){
                 echo "<div class=\"comment_img\">";
-                echo "<img src='/images/test.png'></div>";
+                echo "<img src='/images/comments/{$row['comment_img']}'></div>";
               }
               echo $row['comment'].'<div> </td> </tr> </table> </li>';
 
