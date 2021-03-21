@@ -18,7 +18,7 @@ $indexNum = $tmpNum['cnt'] + 1; // 지금 게시글은 현재 갯수 + 1 임
 
 // 파일 이름 바꾸는 곳
 $file_exe = '';
-$dest_url = 'NULL';
+$dest_url = NULL;
 $change_file_name = '';
 
 // 업로드 된 파일이 있으면 진행

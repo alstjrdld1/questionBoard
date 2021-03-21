@@ -20,7 +20,7 @@
 
   // 파일 이름 바꾸는 곳
   $file_exe = '';
-  $dest_url = 'NULL';
+  $dest_url = NULL;
   $change_file_name = '';
 
   // 업로드 된 파일이 있으면 진행
@@ -43,11 +43,8 @@
           values({$index},'{$comment}', '".date("Y-m-d H:i:s")."', '{$change_file_name}')";
 
   if(mysqli_query($conn, $sql)){
-    echo "<script type=\"text/javascript\"> alert(\"성공!.\n 010-4953-8759\")
-          </script>";
-  }
-  else{
-    echo "<script type=\"text/javascript\"> alert(\"실패!.\n 010-4953-8759\")
+    echo "<script type=\"text/javascript\">
+            window.location.replace('http://localhost/question.php/?idx={$index}')
           </script>";
   }
 ?>
