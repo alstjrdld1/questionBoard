@@ -43,7 +43,7 @@ $row = mysqli_fetch_array($result);
             <div class="question_img">
               <?php if($row['uploaded_file'] != null)
               {
-                echo "<img src='/images/test.png'/>";
+                echo "<img src='/{$row['uploaded_file']}'/>";
               } ?>
             </div>
             <div class="question_content">
@@ -86,8 +86,8 @@ $row = mysqli_fetch_array($result);
             <div class="comment_textarea">
               <textarea placeholder="댓글을 입력해주세요." name="new_comment" tabindex="3"></textarea>
             </div>
-            <div class="comment_fileUpload">
-              <input type="file" name="comment_file">
+            <div class="fileUploadClass">
+              <input type="file" name="fileToUpload" id="fileToUpload" accept="image/*">
             </div>
             <div class="comment_submit">
               <input type="submit" name="" value="Send">
