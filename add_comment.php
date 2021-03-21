@@ -47,4 +47,8 @@
             window.location.replace('http://localhost/question.php/?idx={$index}')
           </script>";
   }
+  else{
+    echo "<script type=\"text/javascript\"> alert(\"error\");
+          </script>";
+  }
 ?>
