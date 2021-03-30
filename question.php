@@ -21,7 +21,7 @@ $row = mysqli_fetch_array($result);
   <body>
     <div class="chat_list_wrap">
         <div class="header" onclick="location.href='http://localhost'">
-            경희대학교 국제학과 TA 질문 홈페이지
+            International Finance TA Q&A
         </div>
 
         <div class="post_all">
@@ -36,12 +36,19 @@ $row = mysqli_fetch_array($result);
 
             <div class="question_date">
               <span> <?php echo $row['date']; ?></span>
+              <a href="/edit_content.php/?idx=<?php echo $index ?>" style="color : black; text-decoration:none;">| 수정 |</a>
             </div>
           </div>
 
+
           <div class="question_body">
             <div class="question_content">
-              <?php echo $row['content']; ?>
+              <?php if($row['uploaded_file'] != null)
+              {
+                echo "<img src='/{$row['uploaded_file']}'/>";
+              } ?>
+              <pre><?php echo $row['content']; ?></pre>
+
             </div>
           </div>
         </div>

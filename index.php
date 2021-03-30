@@ -17,7 +17,7 @@ $result = mysqli_query($conn, $sql);
  <body>
  <div class="chat_list_wrap">
      <div class="header" onclick="location.href='http://localhost'">
-         경희대학교 국제학과 TA 질문 홈페이지
+         International Finance TA Q&A
      </div>
      <div class="search">
          <input type="text" placeholder="질문 검색" />

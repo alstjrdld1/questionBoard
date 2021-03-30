@@ -33,6 +33,7 @@ body {
   padding: 0 16px;
 }
 .chat_list_wrap .list ul {
+
   width: 100%;
   list-style: none;
   margin-top: 3px;
@@ -43,6 +44,8 @@ body {
   border-bottom: 1px solid #e5e5e5;
 }
 .chat_list_wrap .list ul li table {
+  cursor: pointer;
+  
   width: 100%;
 }
 .chat_list_wrap .list ul li table td.question_num {
