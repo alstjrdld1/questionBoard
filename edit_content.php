@@ -26,7 +26,7 @@ $row = mysqli_fetch_array($result);
             International Finance TA Q&A
         </div>
 
-        <form class="post_all" action="./db_shoot.php/?idx=<?php echo $index ?>&method=fix" method="post">
+        <form class="post_all" action="/db_fix_shoot.php/?idx=<?php echo $index ?>" method="post">
           <div class="board_name">
             <h1>질문수정하기</h1>
           </div>

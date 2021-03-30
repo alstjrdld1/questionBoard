@@ -3,6 +3,7 @@ include 'db_connection.php';
 
 $conn = getConnection();
 
+
 $file_name = $_FILES['fileToUpload']['name']; // 사용자가 업로드한 이미지 이름
 echo $file_name;
 $file_tmp_name = $_FILES['fileToUpload']['tmp_name']; // 임시 디렉토리에 저장된 파일명

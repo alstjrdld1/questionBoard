@@ -36,7 +36,7 @@ $result = mysqli_query($conn, $sql);
                echo '<div class="title">';
                echo $row['title'].'</div>';
                echo '<div class="question_preview">';
-               echo $row['preview'].'</div> </td>';
+               echo substr($row['content'], 0, 100).'</div> </td>';
 
                // Time
                echo '<td class="time_td">';
