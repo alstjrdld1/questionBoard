@@ -47,7 +47,7 @@ $row = mysqli_fetch_array($result);
               {
                 echo "<img src='/{$row['uploaded_file']}'/>";
               } ?>
-              <pre><?php echo $row['content']; ?></pre>
+              <pre style="white-space: pre-wrap;"><?php echo $row['content']; ?></pre>
 
             </div>
           </div>

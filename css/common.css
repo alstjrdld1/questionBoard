@@ -45,7 +45,7 @@ body {
 }
 .chat_list_wrap .list ul li table {
   cursor: pointer;
-  
+
   width: 100%;
 }
 .chat_list_wrap .list ul li table td.question_num {
